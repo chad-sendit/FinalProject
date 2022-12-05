@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}What's the Vibe?{% endblock title %}
+
+{% block content %}
+{% load static %} 
+{% if user.is_authenticated %}
+<p>Hi {{ user.username }}!</p>
+{% else %}
+  <a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+<div class="text-center">
+  <h2>Welcome to "What's the Vibe?"</h2>
+  </div>
+  <div class="text-center">
+    
+  </div>
+  <p>Have you ever tried to find the perfect spot to have a first date, have an intense study secession, or a night out with friends 
+      using the internet? Have you tried using services such as <a href="https://www.google.com/">Google</a> or 
+      <a href="https://www.yelp.com/">Yelp</a> to see if a restaurant or coffee shop is worth your time and money while also 
+      providing the “vibe” that you're looking for? Did you find yourself disappointed when you went to that “perfect” spot and 
+      realize it wasn't what you expected? Did you want to shout</p>
+  
+  <blockquote>"There's got to be a better way to find the perfect <b>Vibe</b>!"</blockquote>
+
+  <p>If you answered “yes” to any of those questions, you've come to the right place! Here at “What's the Vibe?” We've done the 
+      hard work of finding the perfect atmosphere for you. With this useful tool, you can see and review local coffee shops, 
+      restaurants, bars, and other indoor public locations to see what best suits your current vibe!</p>
+
+  <aside>
+      <p>Each location is categorized by 5 criteria:</p>
+
+      <ul>
+          <li>The Vibe</li>
+          <li>Noise Volume</li>
+          <li>Size of Location</li>
+          <li>Demeanor of Staff</li>
+          <li>Quality of Product</li>
+      </ul>
+  </aside>
+  
+  <p>Through these criteria, we allow our users to find the perfect spot for whatever it is that they may be looking for.</p><hr>
+{% endblock content %}
